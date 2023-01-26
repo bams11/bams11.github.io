@@ -29,6 +29,16 @@ url: https://bams11.github.io # the base hostname & protocol for your site, e.g.
 instagram_username: sbeomsu_
 github_username: bams11
 
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: bams11/bams11.github.io
+repository_tree: main
+
+## => Language and Timezone
+##############################
+lang: ko
+timezone: Asia/Seoul
+
 # Build settings
 theme: minima
 plugins:
