@@ -7,7 +7,7 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GithubIcon, LinkedinIcon } from "../icons"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -19,7 +19,8 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            github
+            linkedin
           }
         }
       }
@@ -32,24 +33,42 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      <StaticImage
-        className="bio-avatar"
-        layout="fixed"
-        formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
-        width={50}
-        height={50}
-        quality={95}
-        alt="Profile picture"
-      />
+      {/* <img src={profilePic} alt="Profile" style={{ width: "100px" }} /> */}
+      <div style={{ fontSize: 100, lineHeight: "100px" }}>😎</div>
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
-        </p>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            fontFamily: "sans-serif",
+            marginLeft: "20px",
+          }}
+        >
+          <div
+            style={{
+              fontSize: 24,
+              fontWeight: "bold",
+            }}
+          >
+            {author.name}
+          </div>
+          <div
+            style={{
+              fontSize: 14,
+              lineHeight: "14px",
+              color: "#3A3B3C",
+              marginBottom: "10px",
+            }}
+          >
+            LG CNS Software Engineer
+          </div>
+          <div>{author?.summary || null}</div>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <GithubIcon id={social.github} />
+            <LinkedinIcon id={social.linkedin} />
+          </div>
+        </div>
       )}
     </div>
   )

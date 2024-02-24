@@ -9,15 +9,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Bams-dev`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `신범수`,
+      summary: `계획은 없지만 일단 공부는 하고 있는 개발자(SE)입니다.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `SE 신범수(BAMS)의 개발 블로그`,
+    siteUrl: `https://bams-dev.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      github: `bams11`,
+      linkedin: `범수-신-855196232`,
     },
   },
   plugins: [
@@ -102,7 +103,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Bams-dev RSS Feed",
           },
         ],
       },
@@ -110,7 +111,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Bams-dev`,
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,
